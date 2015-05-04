@@ -14097,3 +14097,46 @@ Processing by UsersController#index as HTML
   Rendered layouts/_header.html.slim (4.5ms)
   Rendered layouts/_footer.html.slim (0.4ms)
 Completed 200 OK in 202ms (Views: 199.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-04 14:15:20 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"]]
+  Rendered static_pages/home.html.slim within layouts/application (52.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"]]
+  Rendered layouts/_header.html.slim (32.3ms)
+  Rendered layouts/_footer.html.slim (7.9ms)
+Completed 200 OK in 10864ms (Views: 10691.5ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-04 14:17:16 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"]]
+  Rendered static_pages/home.html.slim within layouts/application (50.4ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"]]
+  Rendered layouts/_header.html.slim (46.1ms)
+  Rendered layouts/_footer.html.slim (8.5ms)
+Completed 200 OK in 681ms (Views: 475.8ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2015-05-04 14:17:22 +0200
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.slim (15.4ms)
+  Rendered users/new.html.slim within layouts/application (939.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"]]
+  Rendered layouts/_header.html.slim (20.7ms)
+  Rendered layouts/_footer.html.slim (6.0ms)
+Completed 200 OK in 1197ms (Views: 1176.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2015-05-04 14:17:27 +0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.slim within layouts/application (15.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"]]
+  Rendered layouts/_header.html.slim (1.5ms)
+  Rendered layouts/_footer.html.slim (0.2ms)
+Completed 200 OK in 257ms (Views: 256.0ms | ActiveRecord: 0.1ms)
