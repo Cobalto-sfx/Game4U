@@ -1,0 +1,18 @@
+2015-05-05 17:47:40[WARN] user: javi
+http://localhost:3000/
+N+1 Query detected
+  Tweet => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /home/javi/Documentos/Mineria/Game4U/app/views/shared/_feed_item.html.slim:2:in `_app_views_shared__feed_item_html_slim__1667556195382799788_70205669681300'
+  /home/javi/Documentos/Mineria/Game4U/app/views/shared/_feed.html.slim:3:in `_app_views_shared__feed_html_slim___1608264492675375669_70205671730720'
+  /home/javi/Documentos/Mineria/Game4U/app/views/static_pages/home.html.slim:11:in `_app_views_static_pages_home_html_slim__3766972610417430972_70205673159040'
+2015-05-05 17:48:26[WARN] user: javi
+http://localhost:3000/
+N+1 Query detected
+  Tweet => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /home/javi/Documentos/Mineria/Game4U/app/views/shared/_feed_item.html.slim:2:in `_app_views_shared__feed_item_html_slim__1667556195382799788_70205669681300'
+  /home/javi/Documentos/Mineria/Game4U/app/views/shared/_feed.html.slim:3:in `_app_views_shared__feed_html_slim___1608264492675375669_70205671730720'
+  /home/javi/Documentos/Mineria/Game4U/app/views/static_pages/home.html.slim:11:in `_app_views_static_pages_home_html_slim__3766972610417430972_70205673159040'
