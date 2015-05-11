@@ -22,11 +22,14 @@
         = f.label :password_confirmation, class: 'control-label'
         = f.password_field :password_confirmation, class: 'form-control'
 
-      .actions
-        = f.submit "Save changes", class: "btn btn-large btn-primary"
-
       div
         = gravatar_for @user
-        <a href="http://gravatar.com/emails">change</a>
+        <a href="http://gravatar.com/emails">Change image</a>
 
+        <br></br>
+        <br>
+
+      .actions
+        = f.submit "Save changes", class: "btn btn-large btn-primary"
+        <br></br>
     = link_to 'Delete my account', @user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"

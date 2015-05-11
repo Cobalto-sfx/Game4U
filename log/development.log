@@ -19133,6 +19133,7 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 274ms (Views: 258.6ms | ActiveRecord: 2.3ms)
 
 
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2015-05-11 13:29:49 +0200
   [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by StaticPagesController#home as HTML
@@ -19923,3 +19924,292 @@ Processing by StaticPagesController#home as HTML
   Rendered layouts/_header.html.slim (0.7ms)
   Rendered layouts/_footer.html.slim (0.1ms)
 Completed 200 OK in 269ms (Views: 246.4ms | ActiveRecord: 2.2ms)
+=======
+Started GET "/users/Santi" for 127.0.0.1 at 2015-05-11 13:33:59 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_follow_form.html.slim (9.4ms)
+  Rendered shared/_profile.html.slim (24.4ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE "tweets"."user_id" = ?  [["user_id", 6]]
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 6]]
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?  [["followed_id", 6]]
+  Rendered shared/_stats.html.slim (83.7ms)
+  Rendered shared/_error_messages.html.slim (15.0ms)
+  Rendered shared/_tweet_form.html.slim (49.9ms)
+  [1m[36mTweet Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "tweets" WHERE "tweets"."user_id" = ? LIMIT 1[0m  [["user_id", 6]]
+  Rendered users/show.html.slim within layouts/application (231.1ms)
+  Rendered layouts/_header.html.slim (24.6ms)
+  Rendered layouts/_footer.html.slim (9.0ms)
+Completed 200 OK in 843ms (Views: 651.3ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:34:14 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (22.3ms)
+  Rendered users/edit.html.slim within layouts/application (1288.7ms)
+  Rendered layouts/_header.html.slim (31.0ms)
+  Rendered layouts/_footer.html.slim (8.9ms)
+Completed 200 OK in 1545ms (Views: 1536.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:35:36 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (0.3ms)
+  Rendered users/edit.html.slim within layouts/application (33.6ms)
+  Rendered layouts/_header.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (0.4ms)
+Completed 200 OK in 239ms (Views: 231.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:35:45 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (0.2ms)
+  Rendered users/edit.html.slim within layouts/application (13.6ms)
+  Rendered layouts/_header.html.slim (2.3ms)
+  Rendered layouts/_footer.html.slim (0.4ms)
+Completed 200 OK in 240ms (Views: 232.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:35:55 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (0.2ms)
+  Rendered users/edit.html.slim within layouts/application (31.1ms)
+  Rendered layouts/_header.html.slim (2.5ms)
+  Rendered layouts/_footer.html.slim (0.4ms)
+Completed 200 OK in 243ms (Views: 237.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:36:02 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (0.2ms)
+  Rendered users/edit.html.slim within layouts/application (30.3ms)
+  Rendered layouts/_header.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (0.4ms)
+Completed 200 OK in 240ms (Views: 234.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:36:25 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (0.2ms)
+  Rendered users/edit.html.slim within layouts/application (33.0ms)
+  Rendered layouts/_header.html.slim (2.5ms)
+  Rendered layouts/_footer.html.slim (0.5ms)
+Completed 200 OK in 229ms (Views: 220.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:36:42 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (0.2ms)
+  Rendered users/edit.html.slim within layouts/application (30.8ms)
+  Rendered layouts/_header.html.slim (2.4ms)
+  Rendered layouts/_footer.html.slim (0.6ms)
+Completed 200 OK in 241ms (Views: 233.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:36:48 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (0.2ms)
+  Rendered users/edit.html.slim within layouts/application (29.2ms)
+  Rendered layouts/_header.html.slim (2.5ms)
+  Rendered layouts/_footer.html.slim (0.6ms)
+Completed 200 OK in 253ms (Views: 243.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:37:35 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (0.5ms)
+  Rendered users/edit.html.slim within layouts/application (32.4ms)
+  Rendered layouts/_header.html.slim (2.7ms)
+  Rendered layouts/_footer.html.slim (0.5ms)
+Completed 200 OK in 244ms (Views: 236.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:38:20 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (0.2ms)
+  Rendered users/edit.html.slim within layouts/application (34.3ms)
+  Rendered layouts/_header.html.slim (2.4ms)
+  Rendered layouts/_footer.html.slim (0.4ms)
+Completed 200 OK in 238ms (Views: 231.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:38:31 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (0.2ms)
+  Rendered users/edit.html.slim within layouts/application (35.7ms)
+  Rendered layouts/_header.html.slim (2.4ms)
+  Rendered layouts/_footer.html.slim (0.4ms)
+Completed 200 OK in 236ms (Views: 229.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:39:46 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (0.2ms)
+  Rendered users/edit.html.slim within layouts/application (29.9ms)
+  Rendered layouts/_header.html.slim (2.3ms)
+  Rendered layouts/_footer.html.slim (0.5ms)
+Completed 200 OK in 225ms (Views: 218.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:39:53 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (0.2ms)
+  Rendered users/edit.html.slim within layouts/application (33.9ms)
+  Rendered layouts/_header.html.slim (2.5ms)
+  Rendered layouts/_footer.html.slim (0.4ms)
+Completed 200 OK in 256ms (Views: 248.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:40:00 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (0.2ms)
+  Rendered users/edit.html.slim within layouts/application (31.0ms)
+  Rendered layouts/_header.html.slim (2.5ms)
+  Rendered layouts/_footer.html.slim (0.4ms)
+Completed 200 OK in 234ms (Views: 225.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:40:07 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (0.2ms)
+  Rendered users/edit.html.slim within layouts/application (30.8ms)
+  Rendered layouts/_header.html.slim (2.4ms)
+  Rendered layouts/_footer.html.slim (0.5ms)
+Completed 200 OK in 236ms (Views: 227.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:40:13 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (0.2ms)
+  Rendered users/edit.html.slim within layouts/application (33.2ms)
+  Rendered layouts/_header.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (0.4ms)
+Completed 200 OK in 253ms (Views: 243.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:40:31 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (0.2ms)
+  Rendered users/edit.html.slim within layouts/application (29.9ms)
+  Rendered layouts/_header.html.slim (2.3ms)
+  Rendered layouts/_footer.html.slim (0.4ms)
+Completed 200 OK in 226ms (Views: 217.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:40:38 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (0.2ms)
+  Rendered users/edit.html.slim within layouts/application (38.1ms)
+  Rendered layouts/_header.html.slim (2.4ms)
+  Rendered layouts/_footer.html.slim (0.4ms)
+Completed 200 OK in 245ms (Views: 238.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:41:01 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (0.2ms)
+  Rendered users/edit.html.slim within layouts/application (42.4ms)
+  Rendered layouts/_header.html.slim (2.8ms)
+  Rendered layouts/_footer.html.slim (0.4ms)
+Completed 200 OK in 264ms (Views: 255.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-11 13:44:47 +0200
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_follow_form.html.slim (9.6ms)
+  Rendered shared/_profile.html.slim (22.3ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE "tweets"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?  [["follower_id", 6]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 6]]
+  Rendered shared/_stats.html.slim (30.9ms)
+  Rendered shared/_error_messages.html.slim (0.3ms)
+  Rendered shared/_tweet_form.html.slim (17.7ms)
+  Rendered shared/_user_info.html.slim (85.1ms)
+  [1m[35m (2.7ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE ("tweets"."user_id" IN (SELECT "relationships"."followed_id" FROM "relationships" WHERE "relationships"."follower_id" = 6) OR "tweets"."user_id" = 6)
+  Rendered shared/_feed.html.slim (28.8ms)
+  Rendered static_pages/home.html.slim within layouts/application (210.4ms)
+  Rendered layouts/_header.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (0.5ms)
+Completed 200 OK in 429ms (Views: 415.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-11 13:49:20 +0200
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_follow_form.html.slim (0.2ms)
+  Rendered shared/_profile.html.slim (3.4ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE "tweets"."user_id" = ?  [["user_id", 6]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 6]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?  [["followed_id", 6]]
+  Rendered shared/_stats.html.slim (15.0ms)
+  Rendered shared/_error_messages.html.slim (0.2ms)
+  Rendered shared/_tweet_form.html.slim (3.5ms)
+  Rendered shared/_user_info.html.slim (34.9ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE ("tweets"."user_id" IN (SELECT "relationships"."followed_id" FROM "relationships" WHERE "relationships"."follower_id" = 6) OR "tweets"."user_id" = 6)[0m
+  Rendered shared/_feed.html.slim (13.4ms)
+  Rendered static_pages/home.html.slim within layouts/application (68.5ms)
+  Rendered layouts/_header.html.slim (2.0ms)
+  Rendered layouts/_footer.html.slim (0.6ms)
+Completed 200 OK in 270ms (Views: 260.0ms | ActiveRecord: 1.8ms)
+>>>>>>> 19f37cf82d9f1d132d5e8f31e894973060b78bc3
