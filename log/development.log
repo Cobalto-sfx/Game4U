@@ -18993,3 +18993,141 @@ Processing by UsersController#new as HTML
   Rendered layouts/_header.html.slim (0.8ms)
   Rendered layouts/_footer.html.slim (0.1ms)
 Completed 200 OK in 101ms (Views: 99.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-11 13:18:05 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"]]
+  Rendered static_pages/home.html.slim within layouts/application (66.6ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"]]
+  Rendered layouts/_header.html.slim (64.9ms)
+  Rendered layouts/_footer.html.slim (19.0ms)
+Completed 200 OK in 8185ms (Views: 8014.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2015-05-11 13:18:43 +0200
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.slim within layouts/application (1166.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"]]
+  Rendered layouts/_header.html.slim (27.9ms)
+  Rendered layouts/_footer.html.slim (9.5ms)
+Completed 200 OK in 1411ms (Views: 1408.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2015-05-11 13:19:04 +0200
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.slim (29.7ms)
+  Rendered users/new.html.slim within layouts/application (66.7ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"]]
+  Rendered layouts/_header.html.slim (2.9ms)
+  Rendered layouts/_footer.html.slim (0.6ms)
+Completed 200 OK in 335ms (Views: 312.8ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-05-11 13:19:50 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+eBNRuKtpbo71IgP5mKjqD7vscpIApTrc9yYysG97Fo1tEBec32XX5WzLtt925Cnbs3JUkgG4gtEtuwopKuaMg==", "user"=>{"slug"=>"Santi", "name"=>"Santi", "email"=>"petardas@petardas.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('petardas@petardas.com') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  Rendered shared/_error_messages.html.slim (11.7ms)
+  Rendered users/new.html.slim within layouts/application (42.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"]]
+  Rendered layouts/_header.html.slim (2.7ms)
+  Rendered layouts/_footer.html.slim (0.5ms)
+Completed 200 OK in 658ms (Views: 432.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-05-11 13:19:59 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x2QSOR8zCEZ4g2f3ZjtniQ4JEWoBUJIyFEyM6tpFATULMB8hjuM6o9bkwSP9glSGXitp8gFU5NIjJvgIv1N3XQ==", "user"=>{"slug"=>"Santi", "name"=>"Santi", "email"=>"petardas@petardas.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('petardas@petardas.com') LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  Rendered shared/_error_messages.html.slim (1.2ms)
+  Rendered users/new.html.slim within layouts/application (13.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1  [["remember_token", "da39a3ee5e6b4b0d3255bfef95601890afd80709"]]
+  Rendered layouts/_header.html.slim (2.5ms)
+  Rendered layouts/_footer.html.slim (0.4ms)
+Completed 200 OK in 369ms (Views: 224.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-05-11 13:20:18 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PIMoWWsw35lhO+l7dC0pIqn+R0gQY+pkHdPDoB3/Wbjw1yVB+uDtfM9cT6/vlBot+dw/0BBnnIQqubdCeOkv0A==", "user"=>{"slug"=>"Santi", "name"=>"Santi", "email"=>"petardas@petardas.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('petardas@petardas.com') LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "slug", "created_at", "updated_at", "remember_token") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Santi"], ["email", "petardas@petardas.com"], ["password_digest", "$2a$10$0riwpY87jnfHq2XaBO4Vk.SIG5CA7L0BbNjP6nsbOXt8U4S75tzvW"], ["slug", "Santi"], ["created_at", "2015-05-11 11:20:18.564468"], ["updated_at", "2015-05-11 11:20:18.564468"], ["remember_token", "f8b1cd0d07f3a1809e40fd5dc0f81739059bebfb"]]
+  [1m[35m (152.5ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["remember_token", "be65739e03f57c91547561093861b56849460323"], ["updated_at", "2015-05-11 11:20:18.727943"], ["id", 6]]
+  [1m[36m (152.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/Santi
+Completed 302 Found in 473ms (ActiveRecord: 307.8ms)
+
+
+Started GET "/users/Santi" for 127.0.0.1 at 2015-05-11 13:20:18 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_follow_form.html.slim (17.7ms)
+  Rendered shared/_profile.html.slim (33.6ms)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE "tweets"."user_id" = ?  [["user_id", 6]]
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 6]]
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?  [["followed_id", 6]]
+  Rendered shared/_stats.html.slim (87.0ms)
+  Rendered shared/_error_messages.html.slim (0.3ms)
+  Rendered shared/_tweet_form.html.slim (31.1ms)
+  [1m[36mTweet Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "tweets" WHERE "tweets"."user_id" = ? LIMIT 1[0m  [["user_id", 6]]
+  Rendered users/show.html.slim within layouts/application (198.8ms)
+  Rendered layouts/_header.html.slim (3.4ms)
+  Rendered layouts/_footer.html.slim (0.5ms)
+Completed 200 OK in 566ms (Views: 446.5ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/users/Santi/edit" for 127.0.0.1 at 2015-05-11 13:21:47 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_error_messages.html.slim (0.3ms)
+  Rendered users/edit.html.slim within layouts/application (30.9ms)
+  Rendered layouts/_header.html.slim (2.4ms)
+  Rendered layouts/_footer.html.slim (0.4ms)
+Completed 200 OK in 354ms (Views: 348.0ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/users/Santi" for 127.0.0.1 at 2015-05-11 13:22:42 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NFeA5s1MhvISKZn+kZ31gC9+JLL86i/D2Tst8BUqc/74A43+XJy0F7xOPyoKJMaPf1xcKvzuWSPuUVkScDwFlg==", "user"=>{"name"=>"Santi", "email"=>"santimola@mucho.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save changes", "id"=>"Santi"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('santimola@mucho.com') AND "users"."id" != 6) LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "users" SET "email" = ?, "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["email", "santimola@mucho.com"], ["password_digest", "$2a$10$ABcnceFWXFvVz5yVreSLju60bA0eE6EPgBSD6vAIxeDhvimQ8CoVm"], ["updated_at", "2015-05-11 11:22:42.631978"], ["id", 6]]
+  [1m[36m (222.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/Santi
+Completed 302 Found in 381ms (ActiveRecord: 225.2ms)
+
+
+Started GET "/users/Santi" for 127.0.0.1 at 2015-05-11 13:22:42 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"Santi"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."slug" = ? LIMIT 1  [["slug", "Santi"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = ? LIMIT 1[0m  [["remember_token", "be65739e03f57c91547561093861b56849460323"]]
+  Rendered shared/_follow_form.html.slim (0.4ms)
+  Rendered shared/_profile.html.slim (4.6ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE "tweets"."user_id" = ?  [["user_id", 6]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 6]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?  [["followed_id", 6]]
+  Rendered shared/_stats.html.slim (16.9ms)
+  Rendered shared/_error_messages.html.slim (0.2ms)
+  Rendered shared/_tweet_form.html.slim (4.2ms)
+  [1m[36mTweet Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "tweets" WHERE "tweets"."user_id" = ? LIMIT 1[0m  [["user_id", 6]]
+  Rendered users/show.html.slim within layouts/application (36.7ms)
+  Rendered layouts/_header.html.slim (2.3ms)
+  Rendered layouts/_footer.html.slim (0.5ms)
+Completed 200 OK in 274ms (Views: 258.6ms | ActiveRecord: 2.3ms)
