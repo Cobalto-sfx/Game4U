@@ -136,3 +136,21 @@ N+1 Query method call stack
   /home/javi/Documentos/Mineria/Game4U/app/views/shared/_feed_item.html.slim:2:in `_app_views_shared__feed_item_html_slim___4173523085016808984_70127941916320'
   /home/javi/Documentos/Mineria/Game4U/app/views/shared/_feed.html.slim:3:in `_app_views_shared__feed_html_slim__4438109887768886540_70127942697460'
   /home/javi/Documentos/Mineria/Game4U/app/views/static_pages/home.html.slim:11:in `_app_views_static_pages_home_html_slim__1536016984331027488_70127940673020'
+2015-05-18 13:26:41[WARN] user: javi
+http://localhost:3000/
+N+1 Query detected
+  Tweet => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /home/javi/Documentos/Mineria/Game4U/app/views/shared/_feed_item.html.slim:2:in `_app_views_shared__feed_item_html_slim__2439930972465660913_70147148135980'
+  /home/javi/Documentos/Mineria/Game4U/app/views/shared/_feed.html.slim:3:in `_app_views_shared__feed_html_slim__46196852641452835_70147148901640'
+  /home/javi/Documentos/Mineria/Game4U/app/views/static_pages/home.html.slim:11:in `_app_views_static_pages_home_html_slim__3760827685175783860_70147146981420'
+2015-05-18 13:26:59[WARN] user: javi
+http://localhost:3000/
+N+1 Query detected
+  Tweet => [:user]
+  Add to your finder: :includes => [:user]
+N+1 Query method call stack
+  /home/javi/Documentos/Mineria/Game4U/app/views/shared/_feed_item.html.slim:2:in `_app_views_shared__feed_item_html_slim__2439930972465660913_70147148135980'
+  /home/javi/Documentos/Mineria/Game4U/app/views/shared/_feed.html.slim:3:in `_app_views_shared__feed_html_slim__46196852641452835_70147148901640'
+  /home/javi/Documentos/Mineria/Game4U/app/views/static_pages/home.html.slim:11:in `_app_views_static_pages_home_html_slim__3760827685175783860_70147146981420'

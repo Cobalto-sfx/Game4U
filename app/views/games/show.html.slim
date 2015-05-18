@@ -1,0 +1,17 @@
+- provide(:title, @user.name)
+
+.row
+  aside.col-md-4
+    section
+      = render 'shared/profile'
+      = render 'shared/stats'
+      = render 'shared/tweet_form' if @user == current_user
+
+  .col-md-8
+    - if @user.tweets.any?
+      .timeline
+        h2.title Tweets
+        = render 'shared/feed'
+
+    - else
+      p No post yet

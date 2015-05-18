@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :relationships, only: [:create, :destroy]
 
   get    'signup'   => 'users#new'
+  get    'signupGame' => 'games#new'
   get    'signin'   => 'sessions#new'
   delete 'signout'  => 'sessions#destroy'
   get    'about'    => 'static_pages#about'
